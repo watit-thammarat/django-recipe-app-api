@@ -9,7 +9,7 @@ RUN mkdir /project
 WORKDIR /project
 COPY ./Pipfile ./Pipfile
 COPY ./Pipfile.lock ./Pipfile.lock
-RUN pipenv install --system --deploy --ignore-pipfile
+RUN pipenv install --system --deploy --ignore-pipfile --dev
 RUN mkdir ./app
 COPY ./app ./app
 
