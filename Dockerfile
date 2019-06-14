@@ -13,5 +13,5 @@ RUN pipenv install --system --deploy --ignore-pipfile
 RUN mkdir ./app
 COPY ./app ./app
 
-# RUN adduser -D user
-# USER user
+RUN adduser -D user
+USER user

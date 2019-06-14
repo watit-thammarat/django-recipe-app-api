@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 black = "*"
+flake8 = "*"
 
 [packages]
 djangorestframework = "<3.10.0,>=3.9.4"
