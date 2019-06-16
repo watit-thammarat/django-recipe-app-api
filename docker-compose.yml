@@ -8,4 +8,5 @@ services:
       - '8000:8000'
     volumes:
       - ./:/project
-    command: sh -c 'python app/manage.py runserver 0.0.0.0:8000'
+    # command: sh -c 'python manage.py runserver 0.0.0.0:8000'
+    command: sh -c 'sleep 365d'
