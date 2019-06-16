@@ -7,5 +7,6 @@ services:
 
 before_script: pip install docker-compose
 
+# comment
 script:
-  - docker-compose run app sh -c 'python app/manage.py test core && flake8'
+  - docker-compose run app sh -c 'python manage.py test && flake8'
