@@ -2,7 +2,7 @@ FROM python:3.7-alpine
 
 ENV PYTHONUNBUFFERED 1
 
-RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
+RUN apk update && apk add jpeg-dev zlib zlib-dev postgresql-dev gcc python3-dev musl-dev
 RUN pip install pipenv
 
 RUN mkdir /project
@@ -17,7 +17,10 @@ RUN mkdir ./app
 COPY ./app ./app
 WORKDIR /project/app
 
+RUN mkdir -p /vol/web/media
+RUN mkdir -p /vol/web/static
 # RUN adduser -D user
+# RUN chown -R user:user /vol/
+# RUN chmod -R 755 /vol/web
 # USER user
-
 CMD ["sleep", "365d"]
